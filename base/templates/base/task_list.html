@@ -1,4 +1,5 @@
 <h1>THIS IS MY TO_DO APP</h1>
+<a href = "{% url 'task-create' %}">Create Task</a>
 
 <table>
     <tr>
@@ -11,6 +12,8 @@
     <tr>
         <td>{{ task.title }}</td>
         <td><a href = "{% url 'task' task.id %}">View</a></td>
+        <td><a href = "{% url 'task-update' task.id %}">Edit</a></td>
+        <td><a href = "{% url 'task-delete' task.id %}">Delete</a></td>
         <!-- <td>{{ task.description }}</td> -->
         <!-- <td>{{ task.status }}</td> -->
     </tr>

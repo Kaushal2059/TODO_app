@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Task
 
 # Create your views here.
@@ -14,3 +16,19 @@ class TaskDetail(DetailView):
     model = Task
     context_object_name = 'task'  # This will be the name of the variable in the template   
     template_name = 'base/task.html'  # Specify the template to use for this view
+
+class TaskCreate(CreateView):
+    model = Task
+    fields = '__all__'  # This will include all fields in the form
+    success_url = reverse_lazy('task-list')  # Redirect to the task list after successful creation
+
+class TaskUpdate(UpdateView):
+    model = Task
+    fields = '__all__'  # This will include all fields in the form
+    success_url = reverse_lazy('task-list')  # Redirect to the task list after successful update
+
+class TaskDelete(DeleteView):
+    model = Task
+    context_object_name = 'task'  # This will be the name of the variable in the template
+    success_url = reverse_lazy('task-list')  # Redirect to the task list after successful deletion
+    template_name = 'base/task_confirm_delete.html'  # Specify the template to use for this view
