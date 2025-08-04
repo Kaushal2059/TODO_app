@@ -3,7 +3,20 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+
+from django.contrib.auth.views import LoginView
+
 from .models import Task
+
+class CustomLoginView(LoginView):
+    template_name = 'base/login.html'  # Specify the template to use for the login view
+    fields = '__all__'  # This will include all fields in the form
+    redirect_authenticated_user = True  # Redirect authenticated users to the home page
+
+    def get_success_url(self):
+        return reverse_lazy('task-list')  # Redirect to the task list after successful login
+    
+    tem
 
 # Create your views here.
 class TskList(ListView):
