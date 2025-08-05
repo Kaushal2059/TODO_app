@@ -1,9 +1,15 @@
-<h3>TASK FORM</h3>
-<a href="{% url 'task-list' %} ">Go Back</a>
+{% extends 'base/main.html' %}
+{% block content %}
 
-<form method="POST" action="{% url 'task-create' %}">
+<div class="header-bar">
+    <h3>TASK FORM</h3>
+    <a href="{% url 'task-list' %} ">&#8592; Back</a>
+</div>
+
+<div class = "card-body"><form method="POST" action="{% url 'task-create' %}">
     {{form.as_p}}
     {% csrf_token %}
-    <input type = "submit" value = "submit">
+    <input class = "button" type = "submit" value = "submit">
+</form></div>
 
-</form>
+{% endblock content %}

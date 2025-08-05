@@ -63,7 +63,7 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
-    fields = ['title', 'description', 'completed']  # This will include all fields in the form
+    fields = ['title', 'description', 'completed']  # This will include required fields in the form
     success_url = reverse_lazy('task-list')  # Redirect to the task list after successful creation
 
     def form_valid(self, form):
