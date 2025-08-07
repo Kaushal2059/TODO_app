@@ -23,11 +23,6 @@ A simple and responsive To-Do List web application built with Django. It allows 
 <img width="675" height="602" alt="image" src="https://github.com/user-attachments/assets/81914c28-0df8-4dc0-ac54-245fcf3ffd64" />
 
 
-## 🚀 Live Demo (Optional)
-
-[Live Demo Link](#) *(Add if hosted online)*
-
----
 
 ## 🛠️ Tech Stack
 
@@ -39,24 +34,5 @@ A simple and responsive To-Do List web application built with Django. It allows 
 
 ## 📁 Project Structure
 
-```bash
-todo_project/
-├── base/
-│   ├── migrations/
-│   ├── static/
-│   ├── templates/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── urls.py
-│   ├── views.py
-│   └── forms.py
-├── todo_project/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── db.sqlite3
-├── manage.py
-└── README.md
+<img width="156" height="524" alt="image" src="https://github.com/user-attachments/assets/ab39c6c5-2351-4f2c-86cc-2750cac21cd6" />
+
