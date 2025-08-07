@@ -27,7 +27,7 @@ A simple and responsive To-Do List web application built with Django. It allows 
 ## 🛠️ Tech Stack
 
 - **Backend:** Django (Python)
-- **Frontend:** HTML, CSS (optionally Tailwind or Bootstrap)
+- **Frontend:** HTML, CSS 
 - **Database:** SQLite3 (default with Django)
 
 ---
